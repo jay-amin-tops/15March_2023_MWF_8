@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and columns of cells.</p>
+    <p> The HTML tables are created using the < table > tag in which the < tr > tag is used to create table rows and < td > tag is used to create data cells. The elements under 
+        < td > are regular and left aligned by default</p>
+        <table class="alt">
+<tbody><tr><th>Tag</th><th>Description</th></tr>
+<tr><td>&lt;table&gt;</td><td>It defines a table.</td></tr>
+<tr><td>&lt;tr&gt;</td><td>It defines a row in a table.</td></tr>
+<tr><td>&lt;th&gt;</td><td>It defines a header cell in a table.</td></tr>
+<tr><td>&lt;td&gt;</td><td>It defines a cell in a table.</td></tr>
+<tr><td>&lt;caption&gt;</td><td>It defines the table caption.</td></tr>
+<tr><td>&lt;colgroup&gt;</td><td>It specifies a group of one or more columns in a table for formatting.</td></tr>
+<tr><td>&lt;col&gt;</td><td>It is used with &lt;colgroup&gt; element to specify column properties for each
+column.</td></tr>
+<tr><td>&lt;tbody&gt;</td><td>It is used to group the body content in a table.</td></tr>
+<tr><td>&lt;thead&gt;</td><td>It is used to group the header content in a table.</td></tr>
+<tr><td>&lt;tfooter&gt;</td><td>It is used to group the footer content in a table.</td></tr>
+</tbody></table>
+        
+        
+            <table border = "1">
+            <tr>
+               <td>Row 1, Column 1</td>
+               <td>Row 1, Column 2</td>
+            </tr>
+            
+            <tr>
+               <td>Row 2, Column 1</td>
+               <td>Row 2, Column 2</td>
+            </tr>
+         </table>
+      <h2>Table Heading</h2>   
+      <table border = "1">
+        <thead>
+
+            <tr>
+               <th>Name</th>
+               <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td>Ramesh Raman</td>
+               <td>5000</td>
+            </tr>
+            
+            <tr>
+               <td>Shabbir Hussein</td>
+               <td>7000</td>
+            </tr>
+        </tbody>
+     </table>
+     <h2>Cellpadding and Cellspacing Attributes</h2>
+     <table border = "1" cellpadding = "5" cellspacing = "5">
+        <tr>
+           <th>Name</th>
+           <th>Salary</th>
+        </tr>
+        <tr>
+           <td>Ramesh Raman</td>
+           <td>5000</td>
+        </tr>
+        <tr>
+           <td>Shabbir Hussein</td>
+           <td>7000</td>
+        </tr>
+     </table>
+     <h2>Colspan and Rowspan Attributes</h2>
+     <table border = "1">
+        <tr>
+           <th>Column 1</th>
+           <th>Column 2</th>
+           <th>Column 3</th>
+        </tr>
+        <tr>
+           <td rowspan = "2">Row 1 Cell 1</td>
+           <td>Row 1 Cell 2</td>
+           <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+           <td>Row 2 Cell 2</td>
+           <td>Row 2 Cell 3</td>
+        </tr>
+        <tr>
+           <td colspan = "3">Row 3 Cell 1</td>
+        </tr>
+     </table>
+     <h2>Tables Backgrounds</h2>
+     <p>You can set table background using one of the following two ways −</p>
+        <ul>
+            <li>
+                bgcolor attribute − You can set background color for whole table or just for one cell.
+
+            </li>
+            <li>
+
+                background attribute − You can set background image for whole table or just for one cell.
+            </li>
+        </ul>
+        <!-- <table border = "1" bordercolor = "green" background = "/images/test.png"> -->
+
+        <table border = "1" bordercolor = "green" bgcolor = "yellow">
+            <tr>
+               <th>Column 1</th>
+               <th>Column 2</th>
+               <th>Column 3</th>
+            </tr>
+            <tr>
+               <td rowspan = "2">Row 1 Cell 1</td>
+               <td>Row 1 Cell 2</td>
+               <td>Row 1 Cell 3</td>
+            </tr>
+            <tr>
+               <td>Row 2 Cell 2</td>
+               <td>Row 2 Cell 3</td>
+            </tr>
+            <tr>
+               <td colspan = "3">Row 3 Cell 1</td>
+            </tr>
+         </table>
+         <h2>Table Caption</h2>
+         <table border = "1" width = "100%">
+            <caption>This is the caption</caption>
+            
+            <tr>
+               <td>row 1, column 1</td><td>row 1, columnn 2</td>
+            </tr>
+            
+            <tr>
+               <td>row 2, column 1</td><td>row 2, columnn 2</td>
+            </tr>
+         </table>
+         <h2>Table Header, Body, and Footer</h2>
+         <table border = "1" width = "100%">
+            <thead>
+               <tr>
+                  <td colspan = "4">This is the head of the table</td>
+               </tr>
+            </thead>
+            
+            <tfoot>
+               <tr>
+                  <td colspan = "4">This is the foot of the table</td>
+               </tr>
+            </tfoot>
+            
+            <tbody>
+               <tr>
+                  <td>Cell 1</td>
+                  <td>Cell 2</td>
+                  <td>Cell 3</td>
+                  <td>Cell 4</td>
+               </tr>
+            </tbody>
+            
+         </table>
+         <h2>Nested Tables </h2>
+         <table border="2" bordercolor="green">
+            <tr>
+                <td>Table 1</td>
+                <td> Table 1
+                    <table border="2" bordercolor="blue">
+                        <tr>
+                            <td>Table 2</td>
+                            <td>Table 2</td>
+                        </tr>
+                        <tr>
+                            <td> Table 2 </td>
+                            <td>Table 2</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td> Table 1 </td>
+                <td> Table 1. </td>
+            </tr>
+        </table>
+         <table border = "1" width = "100%">
+         
+            <tr>
+               <td>
+                  <table border = "1" width = "100%">
+                     <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                     </tr>
+                     <tr>
+                        <td>Jay</td>
+                        <td>7000$</td>
+                     </tr>
+                     <tr>
+                        <td>Jigar</td>
+                        <td>7000$</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            
+         </table>
+</body>
+</html>
