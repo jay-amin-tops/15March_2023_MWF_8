@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form in HTML</h2>
+    <p>The &lt;form&gt; HTML element represents a document section containing interactive controls for submitting information.</p>
+    <p>Getting the Information from the user and send it to the server</p>
+    <p>For sending client data to the server there are tow methods</p>
+    <ol>
+        <li>GET</li>
+        <li>POST</li>
+    </ol>
+    <h3>Attributes</h3>
+    <img width="500px" src="additional-attributes.png" alt=""><br>
+    <img width="500px" src="html_input.jpg" alt=""><br>
+    <img width="500px" src="maxresdefault.jpg" alt=""><br>
+
+    <h3>name="" attr will be helps to send data to the server wihout name we are not able to send data to the server except (javascript ajax)</h3>
+    <h3>id="" attr mainly use for js</h3>
+    <h3>class="" attr mainly use for CSS</h3>
+    <ul>
+        <li>GET will be sending form data using the URL</li>
+        <li>GET will append data to url using ? = query string and key=value&key=value</li>
+        <li>GET method is less secure because its shows form data in url</li>
+        <li>GET method have limitation of 2048 char only 1024 bites</li>
+        <li>GET method doesnt support file uploading</li>
+        <li>GET method help to get data back after refreshing or reloading</li>
+        <li>GET method data will be bookmarked</li>
+        <li>GET method is fater than post</li>
+        <li>GET method preferrable while searching</li>
+    </ul>
+    <p>exmple : file:///C:/xampp/htdocs/WD/15March_2023_MWF_8/HTML/27FormInHTML/01Intro.html?username=aasdfasd&btn=Submit</p>
+    <form method="get"> 
+        <input type="text" name="username" id="username"> 
+        <!-- <input type="text" name="password" id="password">  -->
+        <input type="password" name="password" id="password"> 
+        <input type="submit" name="btn" id="btn"> 
+    </form>
+    <ul>
+        <li>POST will be sending form data without using the URL</li>
+        <li>POST method is secure because its not sending data by URL</li>
+        <li>There is no limitation for POST method for seding data to the server</li>
+        <li>POST method support file uploading</li>
+        <li>while file uploading we must required to add enctype="multipart/form-data" attr</li>
+        <li>we are not getting data after refreshing/realoading our page in POST method </li>
+        <li>wnt able to do bookmarked post method form data</li>
+        <li>POST method is slower than get</li>
+        <li>POST method preferrable while securely sending data</li>
+    </ul>
+    <form method="post"> 
+        <input type="text" name="username" id="username"> 
+        <!-- <input type="text" name="password" id="password">  -->
+        <input type="password" name="password" id="password"> 
+        <input type="submit" name="btn" id="btn"> 
+    </form>
+    <h3>Action</h3>
+    <p>Server Page url</p>
+    <form action="login.php" method="post"> 
+        <input type="text" name="username" id="username"> 
+        <!-- <input type="text" name="password" id="password">  -->
+        <input type="password" name="password" id="password"> 
+        <input type="submit" name="btn" id="btn"> 
+    </form>
+    <h3>File</h3>
+    <p>enctype="multipart/form-data"</p>
+    <form action="login.php" enctype="multipart/form-data" method="post"> 
+    <!-- <form action="login.php" method="post">  -->
+        <input type="text" name="username" id="username"> 
+        <input type="password" name="password" id="password"> 
+        <!-- <input type="file" name="profile_pic" id="profile_pic"> -->
+        <input type="file" name="profile_pic" id="profile_pic" accept="image/*">
+        <input type="submit" name="btn" id="btn"> 
+    </form>
+    <h3>Validation</h3>
+    <p>pattern</p>
+    <form action="login.php" enctype="multipart/form-data" method="post"> 
+        <input placeholder="Enter User Name" type="text" name="username" id="username" required> 
+        <input placeholder="Password" type="password" name="password" id="password"> 
+        <input placeholder="Input email" type="email" title="Invalid email address" name="password" id="password"> 
+        <input placeholder="Input Txt Pattern Email" type="text" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" title="Invalid email address" name="password" id="password"> 
+        <!-- <input type="file" name="profile_pic" id="profile_pic"> -->
+        <input type="file" name="profile_pic" id="profile_pic" accept="image/*">
+        <input type="submit" name="btn" id="btn"> 
+    </form>
+</body>
+</html>
