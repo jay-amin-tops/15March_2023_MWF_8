@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[class*="back"] {
+            height: 500px;
+        }
+
+        .back-color {
+            background-color: teal;
+        }
+
+        .back-image {
+            background-image: url(bg.webp);
+        }
+
+        .back-attach {
+            background-color: teal;
+            color: white;
+            background-image: url(bg.webp);
+            background-attachment: fixed;
+            /* background-attachment: local; */
+            /* background-attachment: scroll; */
+        }
+
+        .back-clip {
+            background-color: teal;
+            color: white;
+            border: 10px dashed rgba(203, 232, 248, 0.6);
+            outline:10px dashed rgba(4, 255, 0, 0.6) ;
+            margin: 50px;
+            padding: 50px;
+            background-image: url(bg.webp);
+            /* background-clip:border-box ; */
+            /* background-clip:content-box ; */
+            background-clip:padding-box;
+        }
+
+        .back-origin {
+            background-color: teal;
+            color: white;
+            border: 10px dashed rgba(203, 232, 248, 0.6);
+            outline:10px dashed rgba(4, 255, 0, 0.6) ;
+            margin: 50px;
+            padding: 50px;
+            background-image: url(bg.webp);
+            /* background-origin:border-box ; */
+            background-origin:content-box ;
+        }
+
+        .back-position {
+            background-color: teal;
+            color: white;
+            border: 10px dashed rgba(203, 232, 248, 0.6);
+            outline:10px dashed rgba(4, 255, 0, 0.6) ;
+            margin: 50px;
+            padding: 50px;
+            background-image: url(bg.webp);
+            /* background-position:50% 10% ; */
+            /* background-position:top ; */
+            /* background-position:center 10%; */
+            background-position:bottom;
+            background-repeat:no-repeat ;
+        }
+
+        .back-repeat {
+            background-color: teal;
+            color: white;
+            border: 10px dashed rgba(203, 232, 248, 0.6);
+            outline:10px dashed rgba(4, 255, 0, 0.6) ;
+            margin: 50px;
+            padding: 50px;
+            background-image: url(bg.webp);
+            /* background-position:50% 10% ; */
+            /* background-position:top ; */
+            /* background-position:center 10%; */
+            background-position:bottom;
+            /* background-repeat:no-repeat ; */
+            background-repeat:repeat-y;
+        }
+
+        .back-size {
+            background-color: teal;
+            color: white;
+            border: 10px dashed rgba(203, 232, 248, 0.6);
+            outline:10px dashed rgba(4, 255, 0, 0.6) ;
+            margin: 50px;
+            padding: 50px;
+            background-image: url(bg.webp);
+            /* background-position:50% 10% ; */
+            /* background-position:top ; */
+            /* background-position:center 10%; */
+            background-position:bottom;
+            background-repeat:no-repeat ;
+            /* background-size:contain ; */
+            background-size:cover ;
+        }
+        .shorthand{
+            height: 400px;
+            background: center / contain no-repeat url(bg.webp),  #cd7878 35% url(bg2.avif);
+            /* background: repeat scroll 0% 0% / auto padding-box border-box none transparent; */
+        }
+        .linear-gradient{
+            height: 400px;
+            background: linear-gradient(orange,white,green);
+        }
+        .radial-gradient{
+            height: 400px;
+            background: radial-gradient(orange,white,green);
+        }
+    </style>
+</head>
+
+<body>
+    <p>The background shorthand CSS property sets all background style properties at once, such as color, image, origin
+        and size, or repeat method. Component properties not set in the background shorthand property value declaration
+        are set to their default values.</p>
+    <p>background: center / contain no-repeat url("../../media/examples/firefox-logo.svg"), #eee 35%
+        url("../../media/examples/lizard.png");</p>
+    <ul>
+        <li><code>background-color</code></li>
+        <li><code>background-image</code></li>
+        <li><code>background-attachment</code></li>
+        <li><code>background-clip</code></li>
+        <li><code>background-origin</code></li>
+        <li><code>background-position</code></li>
+        <li><code>background-repeat</code></li>
+        <li><code>background-size</code></li>
+    </ul>
+    <div class="back-color">
+        <h2>Background-color</h2>
+    </div>
+    <div class="back-image">
+        <h2>Background-image</h2>
+    </div>
+    <div class="back-attach">
+        <h2>Background-attachment</h2>
+    </div>
+    <div class="back-clip">
+        <h2>Background-clip</h2>
+    </div>
+    <div class="back-origin">
+        <h2>Background-origin</h2>
+    </div>
+    <div class="back-position">
+        <h2>Background-position</h2>
+    </div>
+    <div class="back-repeat">
+        <h2>Background-repeat</h2>
+    </div>
+    <div class="back-size">
+        <h2>Background-size</h2>
+    </div>
+    <div class="shorthand">
+        <h2>Background-shorthand</h2>
+    </div>
+    <div class="linear-gradient">
+        <h2>linear-gradient</h2>
+    </div>
+    <div class="radial-gradient">
+        <h2>radial-gradient</h2>
+    </div>
+</body>
+
+</html>
