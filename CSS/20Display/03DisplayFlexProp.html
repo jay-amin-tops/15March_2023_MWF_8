@@ -28,6 +28,23 @@
         .justify-content-space-between{ justify-content: space-between; }
         .justify-content-space-around{ justify-content: space-around; }
         .justify-content-space-evenly{ justify-content: space-evenly; }
+        .d-flex{ display: flex; }
+        .flex-wrap .child-box{ width: 33%; }
+        .flex-wrap{ flex-wrap: wrap; }
+        .flex-wrap-reverse{ flex-wrap: wrap-reverse; }
+        .flex-flow { flex-flow: column wrap;}
+        .gap div{
+            width: 40%;
+        }
+        .gap{
+            flex-wrap: wrap;
+            /* gap: 30px; */
+            row-gap: 10px;
+            column-gap: 50px;
+        }
+        .grow div{
+            flex-grow: 1; /* default 0 */
+        }
     </style>
 </head>
 
@@ -193,6 +210,63 @@
             <div class="child-box">child-box1</div>
             <div class="child-box">child-box2</div>
             <div class="child-box">child-box3</div>
+        </div>
+        <h2>without wrap</h2>
+        <div class="d-flex">
+            <div class="child-box">child-box1</div>
+            <div class="child-box">child-box2</div>
+            <div class="child-box">child-box3</div>
+            <div class="child-box">child-box4</div>
+            <div class="child-box">child-box5</div>
+            <div class="child-box">child-box6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dolorem laudantium sunt consequatur corporis ad accusantium culpa sequi reprehenderit deserunt! Expedita ullam deserunt nesciunt commodi unde maiores facilis sapiente ducimus!</div>
+            <div class="child-box">child-box7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quod, libero vero natus nemo modi nesciunt impedit asperiores nobis voluptate quaerat fuga dolorum, sapiente facere error qui itaque. Ducimus, omnis.</div>
+        </div>
+        <h2>flex-wrap</h2>
+        <div class="d-flex flex-wrap">
+            <div class="child-box">child-box1</div>
+            <div class="child-box">child-box2</div>
+            <div class="child-box">child-box3</div>
+            <div class="child-box">child-box6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dolorem laudantium sunt consequatur corporis ad accusantium culpa sequi reprehenderit deserunt! Expedita ullam deserunt nesciunt commodi unde maiores facilis sapiente ducimus!</div>
+            <div class="child-box">child-box7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quod, libero vero natus nemo modi nesciunt impedit asperiores nobis voluptate quaerat fuga dolorum, sapiente facere error qui itaque. Ducimus, omnis.</div>
+        </div>
+        </div>
+        <h2>flex-wrap-reverse</h2>
+        <div class="d-flex flex-wrap-reverse">
+            <div class="child-box">child-box1</div>
+            <div class="child-box">child-box2</div>
+            <div class="child-box">child-box3</div>
+            <div class="child-box">child-box6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dolorem laudantium sunt consequatur corporis ad accusantium culpa sequi reprehenderit deserunt! Expedita ullam deserunt nesciunt commodi unde maiores facilis sapiente ducimus!</div>
+            <div class="child-box">child-box7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quod, libero vero natus nemo modi nesciunt impedit asperiores nobis voluptate quaerat fuga dolorum, sapiente facere error qui itaque. Ducimus, omnis.</div>
+        </div>
+        <h2>flex-flow: column wrap;</h2>
+        <div class="disp-flex flex-flow">
+            <div class="col-33">box 33 1</div>
+            <div class="col-33">box 33 2</div>
+            <div class="col-33">box 33 3</div>
+            <div class="col-33">box 33 4</div>
+            <div class="col-33">box 33 5</div>
+        </div>
+        <h2>gap</h2>
+        <div class="disp-flex gap">
+            <div class="col">box 1</div>
+            <div class="col">box 2</div>
+            <div class="col">box 3</div>
+            <div class="col">box 3</div>
+            <div class="col">box 3</div>
+        </div>
+        <h2>grow</h2>
+        <div class="disp-flex grow">
+            <div class="col">box 1</div>
+            <div class="col">box 2</div>
+            <div class="col">box 3</div>
+            <div class="col">box 4</div>
+            <div class="col">box 5</div>
+        </div>
+        <h2>grow</h2>
+        <div class="disp-flex grow">
+            <div class="col">box 1</div>
+            <div class="col">box 2</div>
+            <div class="col">box 3</div>
         </div>
     </div>
 </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid;
+        }
+        .row{
+            display: flex;
+        }
+        .flex-direction-row{flex-direction: row  }
+        .flex-direction-row-reverse{flex-direction:  row-reverse  }
+        .flex-direction-column{flex-direction: column  }
+        .flex-direction-column-reverse{flex-direction: column-reverse; }
+        .col-33{
+            width: 400px;
+        }
+        
+        .flex-wrap{
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+        }
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h2>Diplay Flex row{display:flex}</h2>
+    <div class="row">
+        <div class="col">Test</div>
+        <div class="col">Test</div>
+        <div class="col">Test</div>
+        <div class="col">Test</div>
+    </div>
+    <h2>Flex direction row{display:flex; flex-direction:row}</h2>
+    <div class="row flex-direction-row"><div class="col">Col 1</div><div class="col">Col 2</div><div class="col">Col 3</div> <div class="col">Col 4</div></div>
+    <h2>flex-direction-row-reverse row{display:flex; flex-direction:row-reverse}</h2>
+    <div class="row flex-direction-row-reverse"><div class="col">Col 1</div><div class="col">Col 2</div><div class="col">Col 3</div> <div class="col">Col 4</div></div>
+    <h2>flex-direction-column row{display:flex; flex-direction:column}</h2>
+    <div class="row flex-direction-column"><div class="col">Col 1</div><div class="col">Col 2</div><div class="col">Col 3</div> <div class="col">Col 4</div></div>
+    <h2>flex-direction-column-reverse row{display:flex; flex-direction:column-reverse}</h2>
+    <div class="row flex-direction-column-reverse"><div class="col">Col 1</div><div class="col">Col 2</div><div class="col">Col 3</div> <div class="col">Col 4</div></div>
+    <h2>flex-wrap:no-wrap col-33</h2>
+    <div class="row "><div class="col-33">Col 1</div><div class="col-33">Col 2</div><div class="col-33">Col 3</div> <div class="col-33">Col 4</div></div>
+    <h2>flex-wrap col-33</h2>
+    <div class="row flex-wrap"><div class="col-33">Col 1</div><div class="col-33">Col 2</div><div class="col-33">Col 3</div> <div class="col-33">Col 4</div></div>
+    <h2>flex-wrap-reverse col-33</h2>
+    <div class="row wrap-reverse"><div class="col-33">Col 1</div><div class="col-33">Col 2</div><div class="col-33">Col 3</div> <div class="col-33">Col 4</div></div>
+    
+</body>
+</html>

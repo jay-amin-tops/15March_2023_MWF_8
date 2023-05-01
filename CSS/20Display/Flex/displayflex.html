@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .flex-dire-col {
+            height: 100px;
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            flex-direction: row-reverse;
+            /* flex-direction: ; */
+        }
+
+        .flex-container {
+            align-content: flex-end;
+            height: 100px;
+        }
+
+        .flex-justify-content {
+            /* justify-content: center; */
+            /* justify-content: start; */
+            /* justify-content: end; */
+            /* justify-content: flex-end; */
+            /* justify-content:space-around; */
+            justify-content: space-evenly;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+        .flex-wrap {
+
+            height: 100px;
+        }
+
+        .no-wrap {
+            flex-wrap: nowrap;
+        }
+
+        .no-wrap div {
+            width: 200px;
+        }
+
+        /* .flex-wrap{ flex-wrap: wrap; } */
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-wrap-reverse div {
+            width: 200px;
+        }
+
+        .flex-wrap div {
+            width: 200px;
+        }
+
+        .flex-flow {
+            flex-flow: column-reverse;
+        }
+
+        .flex-column-row-gap {
+            row-gap: 10px;
+            column-gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .flex-column-row-gap div {
+            width: 200px;
+        }
+
+        .flex-grow div {
+            flex-grow: 1;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            align-items: stretch;
+        }
+
+        .box-content {
+            flex-grow: 1;
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .box1-content {
+            flex-grow: 2;
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        #content {
+            display: flex;
+            width: 500px;
+        }
+
+        #content div {
+            flex-basis: 120px;
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .box-content-shrink {
+            flex-shrink: 1;
+        }
+
+        .box1-content-shrink {
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://yoksel.github.io/flex-cheatsheet/">flex-cheatsheet</a>
+    <ul>
+        <li>Ordering & Orientation</li>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+        <li>flex-flow</li>
+        <li>order</li>
+        <li>Alignment</li>
+        <li>justify-content</li>
+        <li>align-items, align-self</li>
+        <li>align-content</li>
+        <li>Flexibility</li>
+        <li>flex-grow</li>
+        <li>flex-shrink</li>
+        <li>flex-basis</li>
+        <li>flex</li>
+        <li>Flex values</li>
+    </ul>
+    <ul>
+        <li>flex</li>
+        <li>flex-basis</li>
+        <li>flex-direction</li>
+        <li>flex-flow</li>
+        <li>flex-grow</li>
+        <li>flex-shrink</li>
+        <li>flex-wrap</li>
+    </ul>
+    <h3>Display flex</h3>
+    <div class="row">
+        <div class="box">Test</div>
+        <div class="box">Test</div>
+        <div class="box">Test</div>
+        <div class="box">Test</div>
+        <div class="box">Test</div>
+    </div>
+    <h3>Display flex-direction:column</h3>
+    <ul>
+        <li>column</li>
+        <li>column-reverse</li>
+        <li>row</li>
+        <li>row-reverse</li>
+    </ul>
+    <div class="flex-dire-col">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+    </div>
+
+    <h2>align-content</h2>
+    <p>
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch
+    </p>
+    <pre>
+        .flex-container {
+            align-content: space-around;
+        }
+    </pre>
+    <div class="row flex-container ">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+    </div>
+    <div class="row flex-justify-content ">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+    </div>
+    <h2>Flex Without Wrap</h2>
+    <div class="row no-wrap">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h2>Flex Wrap</h2>
+    <div class="row flex-wrap">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h2>Flex Wrap Reverse</h2>
+    <div class="row flex-wrap-reverse">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h2>flex flow</h2>
+    <div class="row flex-flow">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h2>flex column row gap</h2>
+    <div class="row flex-column-row-gap">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h2>flex grow</h2>
+    <div class="row flex-grow">
+        <div class="box">Test1</div>
+        <div class="box">Test2</div>
+        <div class="box">Test3</div>
+        <div class="box">Test4</div>
+        <div class="box">Test5</div>
+        <div class="box">Test6</div>
+        <div class="box">Test7</div>
+    </div>
+    <h4>This is a Flex-Grow</h4>
+    <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+    <div class="content">
+        <div class="box-content" style="background-color:red;">A</div>
+        <div class="box-content" style="background-color:lightblue;">B</div>
+        <div class="box-content" style="background-color:yellow;">C</div>
+        <div class="box1-content" style="background-color:brown;">D</div>
+        <div class="box1-content" style="background-color:lightgreen;">E</div>
+        <div class="box-content" style="background-color:brown;">F</div>
+    </div>
+
+    <p>The width of content is 500px; the flex-basis of the flex items is 120px.</p>
+    <p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+    <p>The width of D and E is less than the others.</p>
+    <div id="content">
+        <div class="box-content-shrink" style="background-color:red;">A</div>
+        <div class="box-content-shrink" style="background-color:lightblue;">B</div>
+        <div class="box-content-shrink" style="background-color:yellow;">C</div>
+        <div class="box1-content-shrink" style="background-color:brown;">D</div>
+        <div class="box1-content-shrink" style="background-color:lightgreen;">E</div>
+    </div>
+</body>
+
+</html>
