@@ -17,27 +17,36 @@
 .txt-center{
     text-align: center;
 }
-
-
-
-
-
-h1{
-    color: #b68e76;
-    font-family: 'Poppins', serif;
-    font-size: 72px;
-
+.txt-light{
+    color: white;
+}
+.px-3{
+    padding: 0 3em;
+}
+.position-fixed{
+    position: fixed;
+}
+.w-100{
+    width: 100%;
 }
 
+
+
+
+/* Header Nav Menu CSS START */
 .main-menu{
-    width: 1200px;
-    background-color: #363737;
+    width: 1180px;
+    /* height: 200px; */
+    background-color: #3a3a3a;
     margin: 0 auto;
-    border-radius: 0% 0% 15% 15%;
+    padding: 50px 30px 20px;
+    border-radius: 0px 0px 80px 80px;
+    box-shadow: 0 90px 50px -70px gray;
 }
 nav ul li a{
     color: white;
     text-decoration: none;
+    padding: 8px;
 }
 nav ul li{
     display: inline-block;
@@ -55,3 +64,22 @@ nav ul li{
     right: 7px;
     /* width: 2px; */
 }
+
+h1{
+    color: #b68e76;
+    font-family: 'Poppins', serif;
+    font-size: 72px;
+
+}
+/* Header Nav Menu CSS END */
+
+/* Main Top Section CSS START */
+#main-top-section{
+    /* background: url(../images/top-bg.png)no-repeat 0px 0px /cover; */
+    background: url(../images/top-bg.png)no-repeat 0px 0px /contain;
+    /* background-size: contain;  */
+    /* bac */
+
+    height: 1000px;
+}
+/* Main Top Section CSS END */
