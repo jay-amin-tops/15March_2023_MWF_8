@@ -20,10 +20,11 @@
     <script>
         let chkarry = $("input[type='checkbox']");
         $("#enable").click(function (params) {
+            // chkarry.css({ backgroundColor:"red", fontSize:"35px" })
             chkarry.prop({ checked: false, disabled:false })
         })
         $("#disable").click(function (params) {
-            $("#chkbox").prop({ checked: true })
+            // $("#chkbox").prop({ checked: true })
             chkarry.prop({ checked: true, disabled: true })
             // for (let index = 0; index < chkarry.length; index++) {
             // const element = array[index];

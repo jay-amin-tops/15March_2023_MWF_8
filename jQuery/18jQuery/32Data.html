@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>data demo</title>
+  <style>
+  div {
+    color: blue;
+  }
+  span {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+ 
+<div>
+  The values stored were
+  <span></span>
+  and
+  <span></span>
+</div>
+
+
+<span id="data" data-value="1"> > </span>
+ <!-- <button id="btn">Click me</button> -->
+<script>
+    $("#data").click(function () {
+        let dataAccess = $( "#data" ).data( "value" )
+        
+        console.log(dataAccess+1);
+        $( "#data" ).data( "value",dataAccess+1 )
+    })
+    // $( "div" ).data( "test", { first: 16, last: "pizza!" } );
+// $( "span" ).first().text( "$( "div" ).data( "test" ).first ");
+// $( "span" ).last().text( $( "div" ).data( "test" ).last );
+</script>
+ 
+</body>
+</html>
